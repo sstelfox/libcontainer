@@ -11,7 +11,6 @@ import (
 	"testing"
 
 	"github.com/docker/libcontainer"
-	"github.com/docker/libcontainer/cgroups/systemd"
 	"github.com/docker/libcontainer/configs"
 )
 
@@ -394,18 +393,7 @@ func TestProcessCaps(t *testing.T) {
 	}
 }
 
-func TestFreeze(t *testing.T) {
-	testFreeze(t, false)
-}
-
-func TestSystemdFreeze(t *testing.T) {
-	if !systemd.UseSystemd() {
-		t.Skip("Systemd is unsupported")
-	}
-	testFreeze(t, true)
-}
-
-func testFreeze(t *testing.T, systemd bool) {
+func testFreeze(t *testing.T) {
 	if testing.Short() {
 		return
 	}
@@ -419,9 +407,6 @@ func testFreeze(t *testing.T, systemd bool) {
 
 	config := newTemplateConfig(rootfs)
 	f := factory
-	if systemd {
-		f = systemdFactory
-	}
 
 	container, err := f.Create("test", config)
 	ok(t, err)
@@ -465,18 +450,7 @@ func testFreeze(t *testing.T, systemd bool) {
 	}
 }
 
-func TestCpuShares(t *testing.T) {
-	testCpuShares(t, false)
-}
-
-func TestSystemdCpuShares(t *testing.T) {
-	if !systemd.UseSystemd() {
-		t.Skip("Systemd is unsupported")
-	}
-	testCpuShares(t, true)
-}
-
-func testCpuShares(t *testing.T, systemd bool) {
+func testCpuShares(t *testing.T) {
 	if testing.Short() {
 		return
 	}
@@ -485,9 +459,6 @@ func testCpuShares(t *testing.T, systemd bool) {
 	defer remove(rootfs)
 
 	config := newTemplateConfig(rootfs)
-	if systemd {
-		config.Cgroups.Slice = "system.slice"
-	}
 	config.Cgroups.CpuShares = 1
 
 	_, _, err = runContainer(config, "", "ps")

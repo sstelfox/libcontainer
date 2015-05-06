@@ -16,7 +16,6 @@ import (
 	"github.com/docker/docker/pkg/mount"
 	"github.com/docker/libcontainer/cgroups"
 	"github.com/docker/libcontainer/cgroups/fs"
-	"github.com/docker/libcontainer/cgroups/systemd"
 	"github.com/docker/libcontainer/configs"
 	"github.com/docker/libcontainer/configs/validate"
 )
@@ -54,18 +53,6 @@ func InitPath(path string, args ...string) func(*LinuxFactory) error {
 		l.InitArgs = args
 		return nil
 	}
-}
-
-// SystemdCgroups is an options func to configure a LinuxFactory to return
-// containers that use systemd to create and manage cgroups.
-func SystemdCgroups(l *LinuxFactory) error {
-	l.NewCgroupsManager = func(config *configs.Cgroup, paths map[string]string) cgroups.Manager {
-		return &systemd.Manager{
-			Cgroups: config,
-			Paths:   paths,
-		}
-	}
-	return nil
 }
 
 // Cgroupfs is an options func to configure a LinuxFactory to return

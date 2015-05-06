@@ -7,7 +7,6 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/docker/libcontainer"
-	"github.com/docker/libcontainer/cgroups/systemd"
 	_ "github.com/docker/libcontainer/nsenter"
 )
 
@@ -30,7 +29,6 @@ func init() {
 
 var (
 	factory        libcontainer.Factory
-	systemdFactory libcontainer.Factory
 )
 
 func TestMain(m *testing.M) {
@@ -46,13 +44,6 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		logrus.Error(err)
 		os.Exit(1)
-	}
-	if systemd.UseSystemd() {
-		systemdFactory, err = libcontainer.New(".", libcontainer.SystemdCgroups)
-		if err != nil {
-			logrus.Error(err)
-			os.Exit(1)
-		}
 	}
 
 	ret = m.Run()

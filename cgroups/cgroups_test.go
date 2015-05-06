@@ -15,7 +15,6 @@ const (
 5:memory:/
 4:cpuacct,cpu:/
 3:cpuset:/
-2:name=systemd:/user.slice/user-1000.slice/session-16.scope`
 )
 
 func TestParseCgroups(t *testing.T) {
