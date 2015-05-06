@@ -7,8 +7,8 @@ import (
 	"syscall"
 
 	"github.com/codegangsta/cli"
-	"github.com/docker/libcontainer"
-	"github.com/docker/libcontainer/utils"
+	"github.com/sstelfox/libcontainer"
+	"github.com/sstelfox/libcontainer/utils"
 )
 
 var standardEnvironment = &cli.StringSlice{

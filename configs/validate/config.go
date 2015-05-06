@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 type Validator interface {

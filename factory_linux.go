@@ -14,10 +14,10 @@ import (
 	"syscall"
 
 	"github.com/docker/docker/pkg/mount"
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/cgroups/fs"
-	"github.com/docker/libcontainer/configs"
-	"github.com/docker/libcontainer/configs/validate"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/cgroups/fs"
+	"github.com/sstelfox/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/configs/validate"
 )
 
 const (

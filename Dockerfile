@@ -2,7 +2,7 @@ FROM golang:1.4
 
 RUN go get golang.org/x/tools/cmd/cover
 
-ENV GOPATH $GOPATH:/go/src/github.com/docker/libcontainer/vendor
+ENV GOPATH $GOPATH:/go/src/github.com/sstelfox/libcontainer/vendor
 RUN go get github.com/docker/docker/pkg/term
 
 # setup a playground for us to spawn containers in
@@ -12,8 +12,8 @@ RUN mkdir /busybox && \
 RUN curl -sSL https://raw.githubusercontent.com/docker/docker/master/hack/dind -o /dind && \
     chmod +x /dind
 
-COPY . /go/src/github.com/docker/libcontainer
-WORKDIR /go/src/github.com/docker/libcontainer
+COPY . /go/src/github.com/sstelfox/libcontainer
+WORKDIR /go/src/github.com/sstelfox/libcontainer
 RUN cp sample_configs/minimal.json /busybox/container.json
 
 RUN go get -d -v ./...

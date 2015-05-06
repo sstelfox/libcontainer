@@ -7,8 +7,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 type mockCgroupManager struct {

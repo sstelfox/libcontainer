@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/libcontainer"
+	"github.com/sstelfox/libcontainer"
 )
 
 func TestExecIn(t *testing.T) {

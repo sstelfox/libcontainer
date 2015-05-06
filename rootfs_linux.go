@@ -13,9 +13,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/configs"
-	"github.com/docker/libcontainer/label"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/label"
 )
 
 const defaultMountFlags = syscall.MS_NOEXEC | syscall.MS_NOSUID | syscall.MS_NODEV

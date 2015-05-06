@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/docker/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/cgroups"
 )
 
 func TestCpuSetShares(t *testing.T) {

@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcontainer"
-	_ "github.com/docker/libcontainer/nsenter"
+	"github.com/sstelfox/libcontainer"
+	_ "github.com/sstelfox/libcontainer/nsenter"
 )
 
 // init runs the libcontainer initialization code because of the busybox style needs

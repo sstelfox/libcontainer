@@ -5,7 +5,7 @@
 package libcontainer
 
 import (
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 // The status of a container.

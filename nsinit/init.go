@@ -5,8 +5,8 @@ import (
 
 	"github.com/Sirupsen/logrus"
 	"github.com/codegangsta/cli"
-	"github.com/docker/libcontainer"
-	_ "github.com/docker/libcontainer/nsenter"
+	"github.com/sstelfox/libcontainer"
+	_ "github.com/sstelfox/libcontainer/nsenter"
 )
 
 var initCommand = cli.Command{

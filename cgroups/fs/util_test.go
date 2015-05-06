@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 type cgroupTestUtil struct {

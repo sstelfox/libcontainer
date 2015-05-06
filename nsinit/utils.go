@@ -6,8 +6,8 @@ import (
 	"os"
 
 	"github.com/codegangsta/cli"
-	"github.com/docker/libcontainer"
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 func loadConfig(context *cli.Context) (*configs.Config, error) {

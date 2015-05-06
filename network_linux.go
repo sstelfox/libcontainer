@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/docker/libcontainer/netlink"
-	"github.com/docker/libcontainer/utils"
+	"github.com/sstelfox/libcontainer/netlink"
+	"github.com/sstelfox/libcontainer/utils"
 )
 
 var strategies = map[string]networkStrategy{

@@ -10,12 +10,12 @@ import (
 	"syscall"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/configs"
-	"github.com/docker/libcontainer/netlink"
-	"github.com/docker/libcontainer/system"
-	"github.com/docker/libcontainer/user"
-	"github.com/docker/libcontainer/utils"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/netlink"
+	"github.com/sstelfox/libcontainer/system"
+	"github.com/sstelfox/libcontainer/user"
+	"github.com/sstelfox/libcontainer/utils"
 )
 
 type initType string

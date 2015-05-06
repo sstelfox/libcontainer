@@ -9,7 +9,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/docker/libcontainer/label"
+	"github.com/sstelfox/libcontainer/label"
 )
 
 // newConsole returns an initalized console that can be used within a container by copying bytes

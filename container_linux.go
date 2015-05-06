@@ -12,8 +12,8 @@ import (
 	"syscall"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 const stdioFdCount = 3

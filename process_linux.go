@@ -10,8 +10,8 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/docker/libcontainer/cgroups"
-	"github.com/docker/libcontainer/system"
+	"github.com/sstelfox/libcontainer/cgroups"
+	"github.com/sstelfox/libcontainer/system"
 )
 
 type parentProcess interface {

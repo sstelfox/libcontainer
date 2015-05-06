@@ -12,8 +12,8 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/docker/libcontainer"
-	"github.com/docker/libcontainer/configs"
+	"github.com/sstelfox/libcontainer"
+	"github.com/sstelfox/libcontainer/configs"
 )
 
 func newStdBuffers() *stdBuffers {
